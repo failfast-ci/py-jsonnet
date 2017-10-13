@@ -29,7 +29,7 @@ test_requirements = [
 
 setup(
     name='pyjsonnet',
-    version='0.0.3',
+    version='0.0.4',
     description="pyjsonnet",
     long_description=readme,
     author="Antoine Legrand",
