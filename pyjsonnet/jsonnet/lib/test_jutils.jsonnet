@@ -1,3 +1,5 @@
-local jutils = import "jutils.libsonnet";
+local jutils = import "jpy-utils.libsonnet";
 
-jutils.__tests__
+jutils.__tests__ + {
+ generate:: jutils
+}
