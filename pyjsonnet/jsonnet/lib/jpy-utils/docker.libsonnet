@@ -1,6 +1,7 @@
 {
-       containerName(repo, tag):: "%s:%s" % [repo, tag],
         local Docker = self,
+
+       containerName(repo, tag):: "%s:%s" % [repo, tag],
 
         login(server, user, password):: [
             "docker login -u %s -p %s %s" % [user, password, server],

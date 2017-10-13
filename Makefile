@@ -50,7 +50,10 @@ clean-test:
 lint:
 	flake8 $(project) tests
 
-test:
+test-jsonnet:
+	pyjsonnet --output yaml pyjsonnet/jsonnet/lib/jutils.libsonnet
+
+test: test-jsonnet
 	py.test --cov=$(project) --cov-report=html --cov-report=term-missing  --verbose tests
 
 test-all:

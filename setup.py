@@ -29,7 +29,7 @@ test_requirements = [
 
 setup(
     name='pyjsonnet',
-    version='0.0.1',
+    version='0.0.2',
     description="pyjsonnet",
     long_description=readme,
     author="Antoine Legrand",
@@ -39,7 +39,7 @@ setup(
         'pyjsonnet',
         'pyjsonnet.commands',
     ],
-    scripts=['bin/jsonnetpy'],
+    scripts=['bin/pyjsonnet'],
     package_dir={'pyjsonnet':
                  'pyjsonnet'},
     include_package_data=True,

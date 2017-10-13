@@ -22,6 +22,13 @@
     visible
   ),
 
+   set(array)::
+        { [key]: key for key in array },
+
+  arrayHas(array, value):: (
+     value in utils.set(array)
+  ),
+
   path: {
     basename(path):: (local x = std.split(path, "/"); x[std.length(x) -1]),
    },
@@ -42,6 +49,11 @@
 
 
    __tests__:: {
+       arrayHas: (assert utils.arrayHas(["a", "foo"], "foo") == true;
+                 assert utils.arrayHas([], "af") == false;
+                 assert utils.arrayHas(["a", "foo"], "bad") == false;
+       true),
+
         capitalize: (assert utils.capitalize("test") == 'Test'; true),
         basename: (assert utils.path.basename("/foo/bar/toto") == "toto";
                    assert utils.path.basename("foo") == "foo";
